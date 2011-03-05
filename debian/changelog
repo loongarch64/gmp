@@ -1,8 +1,14 @@
-gmp (2:5.0.1+dfsg-5) UNRELEASED; urgency=low
+gmp (2:5.0.1+dfsg-5) unstable; urgency=low
 
   * Merge the v5 branch back to trunk.
 
- -- Steve M. Robbins <smr@debian.org>  Fri, 04 Mar 2011 21:18:30 -0600
+  * Package libgmp10-dev also provides libgmp-dev so you can build-depend
+    on an unversioned GMP -dev package.
+  
+  * Remove archaic MP compatibility library (libmp3 and 32/64-bit
+    variants).
+
+ -- Steve M. Robbins <smr@debian.org>  Sat, 05 Mar 2011 06:56:17 -0600
 
 gmp (2:5.0.1+dfsg-4) experimental; urgency=low
 
