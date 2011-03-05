@@ -7,8 +7,11 @@ gmp (2:5.0.1+dfsg-5) unstable; urgency=low
   
   * Remove archaic MP compatibility library (libmp3 and 32/64-bit
     variants).
+  
+  * control: Set Standards-Version to 3.9.1.
+    - rules: don't build with -D_REENTRANT
 
- -- Steve M. Robbins <smr@debian.org>  Sat, 05 Mar 2011 06:56:17 -0600
+ -- Steve M. Robbins <smr@debian.org>  Sat, 05 Mar 2011 10:25:02 -0600
 
 gmp (2:5.0.1+dfsg-4) experimental; urgency=low
 

@@ -7,7 +7,7 @@ Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.
 Uploaders: Steve M. Robbins <smr@debian.org>
 Vcs-Svn: svn://svn.debian.org/svn/debian-science/packages/gmp/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/debian-science/packages/gmp/trunk/
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 
 Package: libgmp10
 Section: libs
@@ -38,7 +38,7 @@ Package: libgmp10-dev
 Section: libdevel
 Priority: optional
 Architecture: any
-Depends: libgmp10 (= ${binary:Version}), libgmpxx4ldbl (= ${binary:Version}), libmp3 (= ${binary:Version}), ${misc:Depends}
+Depends: libgmp10 (= ${binary:Version}), libgmpxx4ldbl (= ${binary:Version}), ${misc:Depends}
 Provides: libgmp-dev
 Conflicts: libgmp3-dev
 Replaces: libgmp3-dev
@@ -86,7 +86,7 @@ Package: lib32gmp10-dev
 Section: libdevel
 Priority: optional
 Architecture: amd64 ppc64 kfreebsd-amd64
-Depends: libgmp10-dev (= ${binary:Version}), lib32gmp10 (= ${binary:Version}), lib32gmpxx4 (= ${binary:Version}), lib32mp3 (= ${binary:Version}), ${misc:Depends}
+Depends: libgmp10-dev (= ${binary:Version}), lib32gmp10 (= ${binary:Version}), lib32gmpxx4 (= ${binary:Version}), ${misc:Depends}
 Provides: lib32gmp-dev
 Suggests: libgmp10-doc, libmpfr-dev
 Conflicts: libc6-i386 (<= 2.9-18), lib32gmp3-dev
@@ -132,7 +132,7 @@ Package: lib64gmp10-dev
 Section: libdevel
 Priority: optional
 Architecture: powerpc
-Depends: libgmp10-dev (= ${binary:Version}), lib64gmp10 (= ${binary:Version}), lib64gmpxx4 (= ${binary:Version}), lib64mp3 (= ${binary:Version}), ${misc:Depends}
+Depends: libgmp10-dev (= ${binary:Version}), lib64gmp10 (= ${binary:Version}), lib64gmpxx4 (= ${binary:Version}), ${misc:Depends}
 Provides: lib64mp-dev
 Conflicts: lib64mp3-dev
 Replaces: lib64mp3-dev

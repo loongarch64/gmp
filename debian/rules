@@ -26,7 +26,7 @@ ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
   endif
 endif
 
-export CFLAGS = -Wall -g -D_REENTRANT
+export CFLAGS = -Wall -g 
 export LDFLAGS = -Wl,-Bsymbolic-functions
 
 ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
