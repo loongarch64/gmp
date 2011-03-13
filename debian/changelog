@@ -1,3 +1,18 @@
+gmp (2:5.0.1+dfsg-7) UNRELEASED; urgency=low
+
+  [ Peter Pearse ]
+  * For cross builds, strip GNU_TYPES & pass --target.  Closes: #605038.
+
+  [ Steve Langasek ]
+  * We don't need to use $(strip), just avoid having whitespace in the first
+    place.
+  * For that matter, this s/i386/i486/ substitution is entirely unnecessary
+    to begin with; the DEB_HOST_GNU_TYPE is already i486 on Debian, and i686
+    on Ubuntu.  So as long as we're modifying this line, let's simplify it
+    some more.
+
+ -- Steve M. Robbins <smr@debian.org>  Sun, 13 Mar 2011 14:26:32 -0500
+
 gmp (2:5.0.1+dfsg-6) unstable; urgency=low
 
   * control: libgmp10-dev provides the old libgmp3-dev package.  This is a
