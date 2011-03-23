@@ -162,6 +162,8 @@ Section: libdevel
 Priority: optional
 Architecture: any
 Depends: ${misc:Depends}, libgmp-dev (= ${binary:Version})
+Conflicts: libgmp10-dev (<< 2:5.0.1+dfsg-7)
+Replaces: libgmp10-dev
 Description: Multiprecision arithmetic library developers tools
  This is a dummy package that simply pulls in libgmp-dev.
  It can safely be removed.
