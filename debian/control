@@ -40,8 +40,8 @@ Priority: optional
 Architecture: any
 Depends: libgmp10 (= ${binary:Version}), libgmpxx4ldbl (= ${binary:Version}), ${misc:Depends}
 Provides: libgmp10-dev
-Conflicts: libgmp3-dev (<< 5.0.1)
-Replaces: libgmp3-dev
+Conflicts: libgmp3-dev (<< 5.0.1), libgmp10-dev
+Replaces: libgmp3-dev, libgmp10-dev
 Recommends: libstdc++-dev
 Suggests: libgmp10-doc, libmpfr-dev
 Description: Multiprecision arithmetic library developers tools
@@ -89,8 +89,8 @@ Architecture: amd64 ppc64 kfreebsd-amd64
 Depends: libgmp-dev (= ${binary:Version}), lib32gmp10 (= ${binary:Version}), lib32gmpxx4 (= ${binary:Version}), ${misc:Depends}
 Provides: lib32gmp10-dev, lib32gmp3-dev
 Suggests: libgmp10-doc, libmpfr-dev
-Conflicts: libc6-i386 (<= 2.9-18), lib32gmp3-dev
-Replaces: lib32gmp3-dev
+Conflicts: libc6-i386 (<= 2.9-18), lib32gmp3-dev, lib32gmp10-dev
+Replaces: lib32gmp3-dev, lib32gmp10-dev
 Description: Multiprecision arithmetic library developers tools (32bit)
  This development package provides the header files and the symbolic
  links to allow compilation and linking of programs that use the
@@ -134,8 +134,8 @@ Priority: optional
 Architecture: powerpc
 Depends: libgmp-dev (= ${binary:Version}), lib64gmp10 (= ${binary:Version}), lib64gmpxx4 (= ${binary:Version}), ${misc:Depends}
 Provides: lib64gmp10-dev, lib64gmp3-dev
-Conflicts: lib64gmp3-dev
-Replaces: lib64gmp3-dev
+Conflicts: lib64gmp3-dev, lib64gmp10-dev
+Replaces: lib64gmp3-dev, lib64gmp10-dev
 Suggests: libgmp10-doc, libmpfr-dev
 Description: Multiprecision arithmetic library developers tools (64bit)
  This development package provides the header files and the symbolic
