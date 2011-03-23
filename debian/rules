@@ -172,15 +172,15 @@ install: build-stamp install-prep
 
 	dh_install -plibgmpxx4ldbl usr/lib/libgmpxx.so.*
 
-	dh_install -plibgmp10-dev usr/lib/lib*.so
-	dh_install -plibgmp10-dev usr/lib/lib*.a
-	dh_install -plibgmp10-dev usr/lib/lib*.la
-	dh_install -plibgmp10-dev usr/include
-	dh_install -plibgmp10-dev -Xgmp-mparam.h build/gmp*.h usr/include
+	dh_install -plibgmp-dev usr/lib/lib*.so
+	dh_install -plibgmp-dev usr/lib/lib*.a
+	dh_install -plibgmp-dev usr/lib/lib*.la
+	dh_install -plibgmp-dev usr/include
+	dh_install -plibgmp-dev -Xgmp-mparam.h build/gmp*.h usr/include
 
 	# Install upstream ChangeLog, AUTHORS, NEWS, and README only in -dev package
-	dh_installchangelogs -plibgmp10-dev
-	dh_installdocs -plibgmp10-dev AUTHORS NEWS README
+	dh_installchangelogs -plibgmp-dev
+	dh_installdocs -plibgmp-dev AUTHORS NEWS README
 
 install32: build32-stamp install-prep
 	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build32 install
@@ -190,10 +190,10 @@ install32: build32-stamp install-prep
 
 	dh_install -plib32gmpxx4 ${lib32dir}/libgmpxx.so.*
 
-	dh_install -plib32gmp10-dev ${lib32dir}/lib*.so
-	dh_install -plib32gmp10-dev ${lib32dir}/lib*.a
-	dh_install -plib32gmp10-dev ${lib32dir}/lib*.la
-	dh_install -plib32gmp10-dev -Xgmp-mparam.h -Xgmp.h build32/gmp*.h usr/include
+	dh_install -plib32gmp-dev ${lib32dir}/lib*.so
+	dh_install -plib32gmp-dev ${lib32dir}/lib*.a
+	dh_install -plib32gmp-dev ${lib32dir}/lib*.la
+	dh_install -plib32gmp-dev -Xgmp-mparam.h -Xgmp.h build32/gmp*.h usr/include
 
 install64: build64-stamp install-prep
 	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build64 install
@@ -203,10 +203,10 @@ install64: build64-stamp install-prep
 
 	dh_install -plib64gmpxx4 ${lib64dir}/libgmpxx.so.*
 
-	dh_install -plib64gmp10-dev ${lib64dir}/lib*.so
-	dh_install -plib64gmp10-dev ${lib64dir}/lib*.a
-	dh_install -plib64gmp10-dev ${lib64dir}/lib*.la
-	dh_install -plib64gmp10-dev -Xgmp-mparam.h -Xgmp.h build64/gmp*.h usr/include
+	dh_install -plib64gmp-dev ${lib64dir}/lib*.so
+	dh_install -plib64gmp-dev ${lib64dir}/lib*.a
+	dh_install -plib64gmp-dev ${lib64dir}/lib*.la
+	dh_install -plib64gmp-dev -Xgmp-mparam.h -Xgmp.h build64/gmp*.h usr/include
 
 
 # This single target is used to build all the packages, all at once, or

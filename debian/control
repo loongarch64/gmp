@@ -86,7 +86,7 @@ Package: lib32gmp-dev
 Section: libdevel
 Priority: optional
 Architecture: amd64 ppc64 kfreebsd-amd64
-Depends: libgmp10-dev (= ${binary:Version}), lib32gmp10 (= ${binary:Version}), lib32gmpxx4 (= ${binary:Version}), ${misc:Depends}
+Depends: libgmp-dev (= ${binary:Version}), lib32gmp10 (= ${binary:Version}), lib32gmpxx4 (= ${binary:Version}), ${misc:Depends}
 Provides: lib32gmp10-dev, lib32gmp3-dev
 Suggests: libgmp10-doc, libmpfr-dev
 Conflicts: libc6-i386 (<= 2.9-18), lib32gmp3-dev
@@ -132,7 +132,7 @@ Package: lib64gmp-dev
 Section: libdevel
 Priority: optional
 Architecture: powerpc
-Depends: libgmp10-dev (= ${binary:Version}), lib64gmp10 (= ${binary:Version}), lib64gmpxx4 (= ${binary:Version}), ${misc:Depends}
+Depends: libgmp-dev (= ${binary:Version}), lib64gmp10 (= ${binary:Version}), lib64gmpxx4 (= ${binary:Version}), ${misc:Depends}
 Provides: lib64gmp10-dev, lib64gmp3-dev
 Conflicts: lib64gmp3-dev
 Replaces: lib64gmp3-dev
