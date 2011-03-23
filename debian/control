@@ -34,13 +34,13 @@ Description: Multiprecision arithmetic library (C++ bindings)
  arithmetic (ie, a bignum package).  It can operate on signed
  integer, rational, and floating point numeric types.
 
-Package: libgmp10-dev
+Package: libgmp-dev
 Section: libdevel
 Priority: optional
 Architecture: any
 Depends: libgmp10 (= ${binary:Version}), libgmpxx4ldbl (= ${binary:Version}), ${misc:Depends}
-Provides: libgmp-dev, libgmp3-dev
-Conflicts: libgmp3-dev
+Provides: libgmp10-dev
+Conflicts: libgmp3-dev (<< 5.0.1)
 Replaces: libgmp3-dev
 Recommends: libstdc++-dev
 Suggests: libgmp10-doc, libmpfr-dev
@@ -82,12 +82,12 @@ Description: Multiprecision arithmetic library (C++ bindings, 32bit)
  integer, rational, and floating point numeric types.  This
  package includes a 32 bit version of the shared library.
 
-Package: lib32gmp10-dev
+Package: lib32gmp-dev
 Section: libdevel
 Priority: optional
 Architecture: amd64 ppc64 kfreebsd-amd64
 Depends: libgmp10-dev (= ${binary:Version}), lib32gmp10 (= ${binary:Version}), lib32gmpxx4 (= ${binary:Version}), ${misc:Depends}
-Provides: lib32gmp-dev, lib32gmp3-dev
+Provides: lib32gmp10-dev, lib32gmp3-dev
 Suggests: libgmp10-doc, libmpfr-dev
 Conflicts: libc6-i386 (<= 2.9-18), lib32gmp3-dev
 Replaces: lib32gmp3-dev
@@ -128,12 +128,12 @@ Description: Multiprecision arithmetic library (C++ bindings, 64bit)
  integer, rational, and floating point numeric types.  This
  package includes a 64 bit version of the shared library.
 
-Package: lib64gmp10-dev
+Package: lib64gmp-dev
 Section: libdevel
 Priority: optional
 Architecture: powerpc
 Depends: libgmp10-dev (= ${binary:Version}), lib64gmp10 (= ${binary:Version}), lib64gmpxx4 (= ${binary:Version}), ${misc:Depends}
-Provides: lib64gmp-dev, lib64gmp3-dev
+Provides: lib64gmp10-dev, lib64gmp3-dev
 Conflicts: lib64gmp3-dev
 Replaces: lib64gmp3-dev
 Suggests: libgmp10-doc, libmpfr-dev
@@ -156,3 +156,12 @@ Architecture: all
 Depends: ${misc:Depends}
 Description: Multiprecision arithmetic library example code
  This package provides example code illustrating the use of GMP.
+
+Package: libgmp3-dev
+Section: libdevel
+Priority: optional
+Architecture: any
+Depends: ${misc:Depends}, libgmp-dev (= ${binary:Version})
+Description: Multiprecision arithmetic library developers tools
+ This is a dummy package that simply pulls in libgmp-dev.
+ It can safely be removed.

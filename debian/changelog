@@ -1,4 +1,4 @@
-gmp (2:5.0.1+dfsg-7) UNRELEASED; urgency=low
+gmp (2:5.0.1+dfsg-7) unstable; urgency=low
 
   [ Peter Pearse ]
   * For cross builds, strip GNU_TYPES & pass --target.  Closes: #605038.
@@ -11,7 +11,14 @@ gmp (2:5.0.1+dfsg-7) UNRELEASED; urgency=low
     on Ubuntu.  So as long as we're modifying this line, let's simplify it
     some more.
 
- -- Steve M. Robbins <smr@debian.org>  Sun, 13 Mar 2011 14:26:32 -0500
+  [ Steve Robbins ]
+  * control: Make libgmp-dev, and lib{32,64}-dev real packages, providing
+    virtual packages libgmp10-dev, etc.  Add real package libgmp3-dev, a
+    dummy package to pull in libgmp-dev.  Required to ease transition of
+    mlton because it build-depends on itself and on versioned libgmp3-dev.
+    See http://lists.debian.org/debian-release/2011/03/msg00374.html.
+  
+ -- Steve M. Robbins <smr@debian.org>  Tue, 22 Mar 2011 22:00:03 -0500
 
 gmp (2:5.0.1+dfsg-6) unstable; urgency=low
 
