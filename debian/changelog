@@ -1,8 +1,10 @@
 gmp (2:5.0.2+dfsg-1) unstable; urgency=low
 
   * New upstream version.  Closes: #627012.
+  
+  * rules: Empty dependency_libs.  Closes: #633312,
 
- -- Steve M. Robbins <smr@debian.org>  Mon, 29 Aug 2011 19:41:49 -0500
+ -- Steve M. Robbins <smr@debian.org>  Mon, 29 Aug 2011 20:02:49 -0500
 
 gmp (2:5.0.1+dfsg-7) unstable; urgency=low
 

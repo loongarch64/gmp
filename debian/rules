@@ -214,6 +214,8 @@ install64: build64-stamp install-prep
 # affect _all_ packages. Anything you want to only affect one package
 # should be put in another target, such as the install target.
 binary-common:
+	# See 633312, http://wiki.debian.org/ReleaseGoals/LAFileRemoval
+	sed -i "/dependency_libs/ s/'.*'/''/" `find debian/ -name '*.la'`
 	dh_testdir
 	dh_testroot
 	# User lower compatibility to avoid installing upstream changelog in all packages
