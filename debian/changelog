@@ -8,8 +8,17 @@ gmp (2:5.0.2+dfsg-1) unstable; urgency=low
   * patches/s390x.patch: New. 
   * rules: Patches to enable building on s390x (thanks, Andreas Krebbel).
     Closes: #635461.
+  
+  * patches/upstream-dcpi1_bdiv_q.patch.  New.  Upstream fix: There is a
+    GMP bug in mpn/generic/dcpi1_bdiv_q.c that causes incorrect
+    computation with extremely low probability, for unnormalised
+    dividends. The bug might also result in a decrement of memory above
+    dividends, with some potential security impact. The bug might affect
+    several user-level routines, e.g., mpz_invert, but only for operands
+    of at least 3000 bits (for smaller operands, a simpler algorithm is
+    used).
 
- -- Steve M. Robbins <smr@debian.org>  Mon, 29 Aug 2011 20:51:09 -0500
+ -- Steve M. Robbins <smr@debian.org>  Mon, 29 Aug 2011 20:58:05 -0500
 
 gmp (2:5.0.1+dfsg-7) unstable; urgency=low
 
