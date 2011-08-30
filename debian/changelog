@@ -2,9 +2,14 @@ gmp (2:5.0.2+dfsg-1) unstable; urgency=low
 
   * New upstream version.  Closes: #627012.
   
-  * rules: Empty dependency_libs.  Closes: #633312,
+  * rules: Empty dependency_libs.  Closes: #633312.
+  
+  * orig-source.patch: New.  
+  * patches/s390x.patch: New. 
+  * rules: Patches to enable building on s390x (thanks, Andreas Krebbel).
+    Closes: #635461.
 
- -- Steve M. Robbins <smr@debian.org>  Mon, 29 Aug 2011 20:02:49 -0500
+ -- Steve M. Robbins <smr@debian.org>  Mon, 29 Aug 2011 20:51:09 -0500
 
 gmp (2:5.0.1+dfsg-7) unstable; urgency=low
 

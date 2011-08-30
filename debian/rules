@@ -94,6 +94,7 @@ get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.gz
 	mkdir gmp-$(ORIG_SRC_VERSION)+dfsg/doc
 	touch gmp-$(ORIG_SRC_VERSION)+dfsg/doc/Makefile.am
 	touch gmp-$(ORIG_SRC_VERSION)+dfsg/doc/Makefile.in
+	cd gmp-$(ORIG_SRC_VERSION)+dfsg/ && patch -p1 < ../debian/orig-source.patch
 	cd gmp-$(ORIG_SRC_VERSION)+dfsg/ && autoreconf --force --install
 	tar czf gmp_$(ORIG_SRC_VERSION)+dfsg.orig.tar.gz gmp-$(ORIG_SRC_VERSION)+dfsg
 	tar czf gmp-doc_$(ORIG_SRC_VERSION).orig.tar.gz gmp-doc-$(ORIG_SRC_VERSION)
@@ -130,19 +131,19 @@ configure64-stamp:
 	touch $@
 
 build: build-stamp
-build-stamp: configure-stamp
+build-stamp: configure
 	dh_testdir
 	$(MAKE) $(JOBSFLAG) -C build
 	$(MAKE_CHECK) -C build
 	touch $@
 
-build32-stamp: configure32-stamp
+build32-stamp: configure32
 	dh_testdir
 	$(MAKE) $(JOBSFLAG) -C build32
 	$(MAKE_CHECK) -C build32
 	touch $@
 
-build64-stamp: configure64-stamp
+build64-stamp: configure64
 	dh_testdir
 	$(MAKE) $(JOBSFLAG) -C build64
 	$(MAKE_CHECK) -C build64
