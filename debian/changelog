@@ -17,8 +17,12 @@ gmp (2:5.0.2+dfsg-1) unstable; urgency=low
     several user-level routines, e.g., mpz_invert, but only for operands
     of at least 3000 bits (for smaller operands, a simpler algorithm is
     used).
+  
+  * control:
+  * rules: Apply patch (thanks, Riku Voipio) for multiarch, except we do
+    not mark libgmp-dev as multiarch.  Closes: #638959.
 
- -- Steve M. Robbins <smr@debian.org>  Mon, 29 Aug 2011 20:58:05 -0500
+ -- Steve M. Robbins <smr@debian.org>  Mon, 29 Aug 2011 23:06:19 -0500
 
 gmp (2:5.0.1+dfsg-7) unstable; urgency=low
 

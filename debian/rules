@@ -18,6 +18,7 @@ endif
 DEB_HOST_ARCH  ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 export DEB_HOST_GNU_TYPE  := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 export DEB_BUILD_GNU_TYPE := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+export DEB_HOST_MULTIARCH := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 MAKE_CHECK = : disabled make check
 ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
@@ -75,6 +76,8 @@ ifneq (,$(findstring $(DEB_HOST_ARCH), powerpc))
   MAKE_CHECK = : disabled make check
 endif
 
+confflags_ma = $(confflags) --libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
+
 CC   = $(DEB_HOST_GNU_TYPE)-gcc
 CC32 = $(DEB_HOST_GNU_TYPE)-gcc $(m32)
 CC64 = $(DEB_HOST_GNU_TYPE)-gcc $(m64)
@@ -106,7 +109,7 @@ gmp-$(ORIG_SRC_VERSION).tar.gz:
 configure: patch configure-stamp
 configure-stamp:
 	mkdir -p build
-	cd build && ../configure $(confflags) \
+	cd build && ../configure $(confflags_ma) \
 	    AR=$(AR) CC="$(CC)" CFLAGS="$(CFLAGS)" \
 	    CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)"
 	CC="$(DEB_HOST_GNU_TYPE)-gcc" sh debian/fix-gmp-h.sh build
@@ -168,12 +171,12 @@ install-prep:
 install: build-stamp install-prep
 	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build install
 
-	dh_install -plibgmp10 usr/lib/libgmp.so.*
-	dh_install -plibgmpxx4ldbl usr/lib/libgmpxx.so.*
+	dh_install -plibgmp10 usr/lib/*/libgmp.so.*
+	dh_install -plibgmpxx4ldbl usr/lib/*/libgmpxx.so.*
 
-	dh_install -plibgmp-dev usr/lib/lib*.so
-	dh_install -plibgmp-dev usr/lib/lib*.a
-	dh_install -plibgmp-dev usr/lib/lib*.la
+	dh_install -plibgmp-dev usr/lib/*/lib*.so
+	dh_install -plibgmp-dev usr/lib/*/lib*.a
+	dh_install -plibgmp-dev usr/lib/*/lib*.la
 	dh_install -plibgmp-dev usr/include
 	dh_install -plibgmp-dev -Xgmp-mparam.h build/gmp*.h usr/include
 
