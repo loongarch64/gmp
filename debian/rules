@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-ORIG_SRC_VERSION = 5.0.1
+ORIG_SRC_VERSION = 5.0.2
 
 include /usr/share/quilt/quilt.make
 
