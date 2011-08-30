@@ -169,8 +169,6 @@ install: build-stamp install-prep
 	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build install
 
 	dh_install -plibgmp10 usr/lib/libgmp.so.*
-	dh_install -plibmp3 usr/lib/libmp.so.*
-
 	dh_install -plibgmpxx4ldbl usr/lib/libgmpxx.so.*
 
 	dh_install -plibgmp-dev usr/lib/lib*.so
@@ -187,8 +185,6 @@ install32: build32-stamp install-prep
 	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build32 install
 
 	dh_install -plib32gmp10 ${lib32dir}/libgmp.so.*
-	dh_install -plib32mp3 ${lib32dir}/libmp.so.*
-
 	dh_install -plib32gmpxx4 ${lib32dir}/libgmpxx.so.*
 
 	dh_install -plib32gmp-dev ${lib32dir}/lib*.so
@@ -200,8 +196,6 @@ install64: build64-stamp install-prep
 	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build64 install
 
 	dh_install -plib64gmp10 ${lib64dir}/libgmp.so.*
-	dh_install -plib64mp3 ${lib64dir}/libmp.so.*
-
 	dh_install -plib64gmpxx4 ${lib64dir}/libgmpxx.so.*
 
 	dh_install -plib64gmp-dev ${lib64dir}/lib*.so
