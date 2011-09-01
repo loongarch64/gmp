@@ -55,6 +55,8 @@ MA 02111-1307, USA. */
 #include "gmp-ppc64.h"
 #elif defined(__powerpc__)
 #include "gmp-ppc.h"
+#elif defined(__s390x__)
+#include "gmp-s390x.h"
 #elif defined(__s390__)
 #include "gmp-s390.h"
 #elif defined(__sh__)

@@ -1,3 +1,9 @@
+gmp (2:5.0.2+dfsg-2) UNRELEASED; urgency=low
+
+  * gmp.h: Add case for s390x.
+
+ -- Steve M. Robbins <smr@debian.org>  Wed, 31 Aug 2011 22:27:54 -0500
+
 gmp (2:5.0.2+dfsg-1) unstable; urgency=low
 
   * New upstream version.  Closes: #627012.
