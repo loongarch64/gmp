@@ -3,7 +3,8 @@ Description: Enable build on s390x
  prior to running autoreconf and generating the .orig.tar.gz tarball.
  See debian/rules and orig-source.patch.
 Author: Philipp Kern <pkern@debian.org> 
-Bug: 635461 Forwarded: no
+Bug: 635461 
+Forwarded: http://gmplib.org/list-archives/gmp-bugs/2011-August/002346.html
 
 
 --- gmp-5.0.1+dfsg.orig/mpn/s390x/gmp-mparam.h
