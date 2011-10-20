@@ -1,8 +1,16 @@
-gmp (2:5.0.2+dfsg-2) UNRELEASED; urgency=low
+gmp (2:5.0.2+dfsg-2) unstable; urgency=low
 
   * gmp.h: Add case for s390x.
+  
+  * control: Add Breaks relations from libgmp-dev to force upgrade of
+    packages that relied on libgmp.la (thanks, Jonathan Nieder).  Closes:
+    #645475.
 
- -- Steve M. Robbins <smr@debian.org>  Wed, 31 Aug 2011 22:27:54 -0500
+  * rules: Remove .la file from the libgmp-dev package.  Anyone relying on
+    it would not be able to find it after it moved from /usr/lib to
+    /usr/lib/<arch>, anyway  (thanks, Jonathan Nieder).
+
+ -- Steve M. Robbins <smr@debian.org>  Wed, 19 Oct 2011 22:42:12 -0500
 
 gmp (2:5.0.2+dfsg-1) unstable; urgency=low
 

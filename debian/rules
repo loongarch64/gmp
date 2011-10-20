@@ -176,7 +176,6 @@ install: build-stamp install-prep
 
 	dh_install -plibgmp-dev usr/lib/*/lib*.so
 	dh_install -plibgmp-dev usr/lib/*/lib*.a
-	dh_install -plibgmp-dev usr/lib/*/lib*.la
 	dh_install -plibgmp-dev usr/include
 	dh_install -plibgmp-dev -Xgmp-mparam.h build/gmp*.h usr/include
 
