@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-ORIG_SRC_VERSION = 5.0.2
+ORIG_SRC_VERSION = 5.0.3
 
 include /usr/share/quilt/quilt.make
 
@@ -89,22 +89,21 @@ CXX64 = $(DEB_HOST_GNU_TYPE)-g++ $(m64)
 confflags += $(confflags_build)
 
 
-get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.gz
-	tar xzf gmp-$(ORIG_SRC_VERSION).tar.gz
+get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.bz2
+	tar --bzip -xf $<
 	mv gmp-$(ORIG_SRC_VERSION) gmp-$(ORIG_SRC_VERSION)+dfsg
 	mkdir gmp-doc-$(ORIG_SRC_VERSION)
 	mv gmp-$(ORIG_SRC_VERSION)+dfsg/doc/ gmp-doc-$(ORIG_SRC_VERSION)/
 	mkdir gmp-$(ORIG_SRC_VERSION)+dfsg/doc
 	touch gmp-$(ORIG_SRC_VERSION)+dfsg/doc/Makefile.am
 	touch gmp-$(ORIG_SRC_VERSION)+dfsg/doc/Makefile.in
-	cd gmp-$(ORIG_SRC_VERSION)+dfsg/ && patch -p1 < ../debian/orig-source.patch
 	cd gmp-$(ORIG_SRC_VERSION)+dfsg/ && autoreconf --force --install
 	tar czf gmp_$(ORIG_SRC_VERSION)+dfsg.orig.tar.gz gmp-$(ORIG_SRC_VERSION)+dfsg
 	tar czf gmp-doc_$(ORIG_SRC_VERSION).orig.tar.gz gmp-doc-$(ORIG_SRC_VERSION)
 	rm -rf gmp-$(ORIG_SRC_VERSION)+dfsg gmp-doc-$(ORIG_SRC_VERSION) gmp-$(ORIG_SRC_VERSION).tar.gz
 
-gmp-$(ORIG_SRC_VERSION).tar.gz:
-	wget ftp://ftp.gnu.org/gnu/gmp/gmp-$(ORIG_SRC_VERSION).tar.gz
+gmp-$(ORIG_SRC_VERSION).tar.bz2:
+	wget ftp://ftp.gnu.org/gnu/gmp/$@
 
 configure: patch configure-stamp
 configure-stamp:

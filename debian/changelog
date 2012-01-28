@@ -1,3 +1,12 @@
+gmp (2:5.0.3+dfsg-1) unstable; urgency=low
+
+  * New upstream version.  Supports s390x.
+  
+  * patches/s390x.patch: Remove.
+  * patches/upstream-dcpi1_bdiv_q.patch: Remove.  Applied upstream.
+
+ -- Steve M. Robbins <smr@debian.org>  Sat, 28 Jan 2012 02:43:35 -0600
+
 gmp (2:5.0.2+dfsg-2) unstable; urgency=low
 
   * gmp.h: Add case for s390x.
