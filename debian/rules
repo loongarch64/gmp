@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-ORIG_SRC_VERSION = 5.0.3
+ORIG_SRC_VERSION = 5.0.4
 
 include /usr/share/quilt/quilt.make
 
@@ -243,5 +243,8 @@ binary-arch: build install $(EXTRA_INSTALL)
 binary-%: build install
 	make -f debian/rules binary-common DH_OPTIONS=-p$*
 
+build-arch: build
+build-indep: build
+
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary-common binary install install-prep
+.PHONY: build build-arch build-indep clean binary-indep binary-arch binary-common binary install install-prep
