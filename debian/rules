@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-ORIG_SRC_VERSION = 5.0.4
+ORIG_SRC_VERSION = 5.0.5
 
 include /usr/share/quilt/quilt.make
 
@@ -44,13 +44,7 @@ lib32dir = usr/lib32
 lib64dir = usr/lib64
 
 
-confflags = --prefix=/usr --enable-cxx
-
-ifneq (,$(filter $(DEB_HOST_ARCH), amd64 kfreebsd-amd64 lpia))
-  confflags += --disable-fat
-else
-  confflags += --enable-fat
-endif
+confflags = --prefix=/usr --enable-cxx --enable-fat
 
 ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
   AR = ar

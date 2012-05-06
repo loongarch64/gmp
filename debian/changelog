@@ -1,3 +1,14 @@
+gmp (2:5.0.5+dfsg-1) unstable; urgency=low
+
+  * New upstream.
+  
+  * rules: Always built FAT binary, on advice from upstream.  By default,
+    GMP compiles for the CPU it detect at configure time.  But with
+    --enable-fat it detects the CPU at run time.  This is important for
+    cpu-dependent workarounds.
+
+ -- Steve M. Robbins <smr@debian.org>  Sun, 06 May 2012 12:24:35 -0500
+
 gmp (2:5.0.4+dfsg-1) unstable; urgency=low
 
   * New upstream version.
