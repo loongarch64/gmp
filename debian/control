@@ -51,6 +51,7 @@ Breaks: guile-1.8-dev (<< 1.8.8+1-1), libcdd-dev (<< 094b.dfsg-4.2),
 Replaces: libgmp3-dev, libgmp10-dev
 Recommends: libstdc++-dev
 Suggests: libgmp10-doc, libmpfr-dev
+Multi-Arch: same
 Description: Multiprecision arithmetic library developers tools
  This development package provides the header files and the symbolic
  links to allow compilation and linking of programs that use the libraries
