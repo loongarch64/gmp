@@ -1,3 +1,10 @@
+gmp (2:5.0.5+dfsg-2) unstable; urgency=low
+
+  * Revert to FAT binary situation of 5.0.4: disabled for amd64,
+    kfreebsd-amd64, and lpia; enabled for all other architectures.
+
+ -- Steve M. Robbins <smr@debian.org>  Fri, 01 Jun 2012 17:12:44 -0500
+
 gmp (2:5.0.5+dfsg-1.1) unstable; urgency=low
 
   * Non-maintainer upload.
