@@ -2,12 +2,12 @@ Source: gmp
 Homepage: http://gmplib.org/
 Section: libs
 Priority: optional
-Build-Depends: m4, debhelper (>= 8.1.3), quilt, gcc-multilib [amd64 kfreebsd-amd64 powerpc ppc64], g++-multilib [amd64 kfreebsd-amd64 powerpc ppc64]
+Build-Depends: m4, debhelper (>= 9), dpkg-dev (>= 1.16.1~), quilt, gcc-multilib [amd64 kfreebsd-amd64 powerpc ppc64], g++-multilib [amd64 kfreebsd-amd64 powerpc ppc64]
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Steve M. Robbins <smr@debian.org>
 Vcs-Svn: svn://svn.debian.org/svn/debian-science/packages/gmp/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/debian-science/packages/gmp/trunk/
-Standards-Version: 3.9.1
+Standards-Version: 3.9.3
 
 Package: libgmp10
 Section: libs
