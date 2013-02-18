@@ -37,6 +37,8 @@ MA 02111-1307, USA. */
 
 #if defined(__alpha__)
 #include "gmp-alpha.h"
+#elif defined(__aarch64__)
+#include "gmp-aarch64.h"
 #elif defined(__arm__)
 #include "gmp-arm.h"
 #elif defined(__avr32__)
@@ -64,7 +66,11 @@ MA 02111-1307, USA. */
 #elif defined(__sparc__)
 #include "gmp-sparc.h"
 #elif defined(__x86_64__)
-#include "gmp-x86_64.h"
+#  if defined(__ILP32__)
+#    include "gmp-x86_x32.h"
+#  else
+#    include "gmp-x86_64.h"
+#  endif
 #else
 #error "The gmp-dev package is not usable with the architecture."
 #endif
