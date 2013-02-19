@@ -5,7 +5,7 @@ gmp (2:5.1.1+dfsg-1) experimental; urgency=low
   
   * fix-gmp.sh: Add support for __aarch64__ (closes: #693467).
 
- -- Steve M. Robbins <smr@debian.org>  Sun, 17 Feb 2013 21:16:31 -0600
+ -- Steve M. Robbins <smr@debian.org>  Mon, 18 Feb 2013 18:01:16 -0600
 
 gmp (2:5.1.0+dfsg-1) experimental; urgency=low
 
