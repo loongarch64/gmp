@@ -2,8 +2,6 @@
 
 ORIG_SRC_VERSION = 5.1.1
 
-include /usr/share/quilt/quilt.make
-
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
@@ -112,7 +110,7 @@ get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.bz2
 gmp-$(ORIG_SRC_VERSION).tar.bz2:
 	wget ftp://ftp.gnu.org/gnu/gmp/$@
 
-configure: patch configure-stamp
+configure: configure-stamp
 configure-stamp:
 	mkdir -p build
 	cd build && ../configure $(confflags_ma) \
@@ -121,7 +119,7 @@ configure-stamp:
 	CC="$(DEB_HOST_GNU_TYPE)-gcc" sh debian/fix-gmp-h.sh build
 	touch $@
 
-configure32: patch configure32-stamp
+configure32: configure32-stamp
 configure32-stamp:
 	mkdir -p build32
 	cd build32 && ../configure $(confflags32) \
@@ -130,7 +128,7 @@ configure32-stamp:
 	CC="$(CC32)" sh debian/fix-gmp-h.sh build32
 	touch $@
 
-configure64: patch configure64-stamp
+configure64: configure64-stamp
 configure64-stamp:
 	mkdir -p build64
 	cd build64 && ../configure $(confflags64) \
@@ -158,9 +156,7 @@ build64-stamp: configure64
 	$(MAKE_CHECK) -C build64
 	touch $@
 
-clean: clean-patched unpatch
-
-clean-patched:
+clean:
 	dh_testdir
 	dh_testroot
 	rm -rf build build-stamp
