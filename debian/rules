@@ -79,6 +79,10 @@ ifneq (,$(findstring $(DEB_HOST_ARCH), powerpc))
   MAKE_CHECK = : disabled make check
 endif
 
+ifneq (,$(findstring $(DEB_HOST_ARCH), x32))
+  confflags += ABI=x32
+endif
+
 confflags_ma = $(confflags) --libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
 CC   = $(DEB_HOST_GNU_TYPE)-gcc

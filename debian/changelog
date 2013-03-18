@@ -1,3 +1,9 @@
+gmp (2:5.1.1+dfsg-2) experimental; urgency=low
+
+  * rules: Need to set ABI=x32 at configure time.  Closes: #698000.
+
+ -- Steve M. Robbins <smr@debian.org>  Sun, 17 Mar 2013 21:54:08 -0500
+
 gmp (2:5.1.1+dfsg-1) experimental; urgency=low
 
   * New upstream.
