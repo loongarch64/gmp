@@ -1,3 +1,13 @@
+gmp (2:5.1.2+dfsg-1) unstable; urgency=low
+
+  * New upstream.
+    - reduced SQR_TOOM2_THRESHOLD to 30.  Closes: #706984.
+  
+  * patches/preserve-ia64-registers.patch: New.  Upstream patch to
+    preserve registers.  Closes: #708264.
+
+ -- Steve M. Robbins <smr@debian.org>  Thu, 23 May 2013 23:23:44 -0500
+
 gmp (2:5.1.1+dfsg-3) unstable; urgency=low
 
   * Upload to unstable.
