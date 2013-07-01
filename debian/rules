@@ -81,7 +81,7 @@ ifneq (,$(findstring $(DEB_HOST_ARCH), x32))
   confflags += ABI=x32
 endif
 
-confflags_ma = $(confflags) --libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
+confflags_ma = $(confflags) $(confflags_build) --libdir=/usr/lib/$(DEB_HOST_MULTIARCH) --includedir=/usr/include/$(DEB_HOST_MULTIARCH)
 
 CC   = $(DEB_HOST_GNU_TYPE)-gcc
 CC32 = $(DEB_HOST_GNU_TYPE)-gcc $(m32)
@@ -90,8 +90,6 @@ CC64 = $(DEB_HOST_GNU_TYPE)-gcc $(m64)
 CXX   = $(DEB_HOST_GNU_TYPE)-g++
 CXX32 = $(DEB_HOST_GNU_TYPE)-g++ $(m32)
 CXX64 = $(DEB_HOST_GNU_TYPE)-g++ $(m64)
-
-confflags += $(confflags_build)
 
 
 get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.bz2
@@ -116,7 +114,6 @@ configure-stamp:
 	cd build && ../configure $(confflags_ma) \
 	    AR=$(AR) CC="$(CC)" CFLAGS="$(CFLAGS)" \
 	    CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)"
-	CC="$(DEB_HOST_GNU_TYPE)-gcc" sh debian/fix-gmp-h.sh build
 	touch $@
 
 configure32: configure32-stamp
@@ -171,7 +168,9 @@ install-prep:
 	dh_installdirs
 
 install: build-stamp install-prep
-	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build install
+	# Install places gmp.h in 'includeexecdir' which is non-standard and cannot be set at compile time,
+	# so override it at install.
+	$(MAKE) DESTDIR=`pwd`/debian/tmp includeexecdir=/usr/include/$(DEB_HOST_MULTIARCH) -C build install
 
 	dh_install -plibgmp10 usr/lib/*/libgmp.so.*
 	dh_install -plibgmpxx4ldbl usr/lib/*/libgmpxx.so.*
@@ -179,7 +178,6 @@ install: build-stamp install-prep
 	dh_install -plibgmp-dev usr/lib/*/lib*.so
 	dh_install -plibgmp-dev usr/lib/*/lib*.a
 	dh_install -plibgmp-dev usr/include
-	dh_install -plibgmp-dev -Xgmp-mparam.h build/gmp*.h usr/include
 
 	# Install upstream ChangeLog, AUTHORS, NEWS, and README only in -dev package
 	dh_installchangelogs -plibgmp-dev

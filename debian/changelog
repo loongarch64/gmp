@@ -1,3 +1,10 @@
+gmp (2:5.1.2+dfsg-2) unstable; urgency=low
+
+  * rules(libgmp-dev): Install gmp.h into multi-arch include directory.
+    Closes: #675577
+
+ -- Steve M. Robbins <smr@debian.org>  Sun, 30 Jun 2013 20:20:22 -0500
+
 gmp (2:5.1.2+dfsg-1) unstable; urgency=low
 
   * New upstream.
