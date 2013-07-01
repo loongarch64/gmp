@@ -42,7 +42,6 @@ else
 endif
 
 lib32dir = usr/lib32
-lib64dir = usr/lib64
 
 
 confflags = --prefix=/usr --enable-cxx
@@ -67,16 +66,6 @@ ifneq (,$(findstring $(DEB_HOST_ARCH), amd64 ppc64 kfreebsd-amd64))
   confflags32 = ABI=32 $(confflags) $(confflags_build) --libdir=/${lib32dir}
 endif
 
-ifneq (,$(findstring $(DEB_HOST_ARCH), powerpc))
-  EXTRA_INSTALL=install64
-  m64=-m64
-  confflags64_build = --build $(DEB_BUILD_GNU_TYPE) --host powerpc64-gnu-linux
-  confflags64 = ABI=mode64 NM=nm $(confflags) $(confflags64_build) --libdir=/${lib64dir}
-  CC64 = gcc $(m64)
-  CXX64 = g++ $(m64)
-  MAKE_CHECK = : disabled make check
-endif
-
 ifneq (,$(findstring $(DEB_HOST_ARCH), x32))
   confflags += ABI=x32
 endif
@@ -85,11 +74,9 @@ confflags_ma = $(confflags) $(confflags_build) --libdir=/usr/lib/$(DEB_HOST_MULT
 
 CC   = $(DEB_HOST_GNU_TYPE)-gcc
 CC32 = $(DEB_HOST_GNU_TYPE)-gcc $(m32)
-CC64 = $(DEB_HOST_GNU_TYPE)-gcc $(m64)
 
 CXX   = $(DEB_HOST_GNU_TYPE)-g++
 CXX32 = $(DEB_HOST_GNU_TYPE)-g++ $(m32)
-CXX64 = $(DEB_HOST_GNU_TYPE)-g++ $(m64)
 
 
 get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.bz2
@@ -125,15 +112,6 @@ configure32-stamp:
 	CC="$(CC32)" sh debian/fix-gmp-h.sh build32
 	touch $@
 
-configure64: configure64-stamp
-configure64-stamp:
-	mkdir -p build64
-	cd build64 && ../configure $(confflags64) \
-	    AR=$(AR) CC="$(CC64)" CFLAGS="$(CFLAGS)" \
-	    CXX="$(CXX64)" CXXFLAGS="$(CXXFLAGS)" 
-	CC="$(CC64)" sh debian/fix-gmp-h.sh build64
-	touch $@
-
 build: build-stamp
 build-stamp: configure
 	dh_testdir
@@ -147,18 +125,11 @@ build32-stamp: configure32
 	$(MAKE_CHECK) -C build32
 	touch $@
 
-build64-stamp: configure64
-	dh_testdir
-	$(MAKE) $(JOBSFLAG) -C build64
-	$(MAKE_CHECK) -C build64
-	touch $@
-
 clean:
 	dh_testdir
 	dh_testroot
 	rm -rf build build-stamp
 	rm -rf build32 build32-stamp
-	rm -rf build64 build64-stamp
 	dh_clean
 
 install-prep:
@@ -193,17 +164,6 @@ install32: build32-stamp install-prep
 	dh_install -plib32gmp-dev ${lib32dir}/lib*.a
 	dh_install -plib32gmp-dev ${lib32dir}/lib*.la
 	dh_install -plib32gmp-dev -Xgmp-mparam.h -Xgmp.h build32/gmp*.h usr/include
-
-install64: build64-stamp install-prep
-	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build64 install
-
-	dh_install -plib64gmp10 ${lib64dir}/libgmp.so.*
-	dh_install -plib64gmpxx4 ${lib64dir}/libgmpxx.so.*
-
-	dh_install -plib64gmp-dev ${lib64dir}/lib*.so
-	dh_install -plib64gmp-dev ${lib64dir}/lib*.a
-	dh_install -plib64gmp-dev ${lib64dir}/lib*.la
-	dh_install -plib64gmp-dev -Xgmp-mparam.h -Xgmp.h build64/gmp*.h usr/include
 
 
 # This single target is used to build all the packages, all at once, or
