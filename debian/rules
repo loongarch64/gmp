@@ -70,7 +70,7 @@ ifneq (,$(findstring $(DEB_HOST_ARCH), x32))
   confflags += ABI=x32
 endif
 
-confflags_ma = $(confflags) $(confflags_build) --libdir=/usr/lib/$(DEB_HOST_MULTIARCH) --includedir=/usr/include/$(DEB_HOST_MULTIARCH)
+confflags_ma = $(confflags) $(confflags_build) --libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
 CC   = $(DEB_HOST_GNU_TYPE)-gcc
 CC32 = $(DEB_HOST_GNU_TYPE)-gcc $(m32)
@@ -109,7 +109,6 @@ configure32-stamp:
 	cd build32 && ../configure $(confflags32) \
 	    AR=$(AR) CC="$(CC32)" CFLAGS="$(CFLAGS)" \
 	    CXX="$(CXX32)" CXXFLAGS="$(CXXFLAGS)" 
-	CC="$(CC32)" sh debian/fix-gmp-h.sh build32
 	touch $@
 
 build: build-stamp
@@ -139,6 +138,7 @@ install-prep:
 	dh_installdirs
 
 install: build-stamp install-prep
+	rm -rf debian/tmp
 	# Install places gmp.h in 'includeexecdir' which is non-standard and cannot be set at compile time,
 	# so override it at install.
 	$(MAKE) DESTDIR=`pwd`/debian/tmp includeexecdir=/usr/include/$(DEB_HOST_MULTIARCH) -C build install
@@ -155,15 +155,15 @@ install: build-stamp install-prep
 	dh_installdocs -plibgmp-dev AUTHORS NEWS README
 
 install32: build32-stamp install-prep
-	$(MAKE) DESTDIR=`pwd`/debian/tmp -C build32 install
+	rm -rf debian/tmp
+	$(MAKE) DESTDIR=`pwd`/debian/tmp includeexecdir=/usr/include/gmp32/$(DEB_HOST_MULTIARCH) -C build32 install
 
 	dh_install -plib32gmp10 ${lib32dir}/libgmp.so.*
 	dh_install -plib32gmpxx4 ${lib32dir}/libgmpxx.so.*
 
 	dh_install -plib32gmp-dev ${lib32dir}/lib*.so
 	dh_install -plib32gmp-dev ${lib32dir}/lib*.a
-	dh_install -plib32gmp-dev ${lib32dir}/lib*.la
-	dh_install -plib32gmp-dev -Xgmp-mparam.h -Xgmp.h build32/gmp*.h usr/include
+	dh_install -plib32gmp-dev usr/include/gmp32
 
 
 # This single target is used to build all the packages, all at once, or

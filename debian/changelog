@@ -3,6 +3,8 @@ gmp (2:5.1.2+dfsg-2) unstable; urgency=low
   * rules(libgmp-dev): Install gmp.h into multi-arch include directory.
     Closes: #675577
   
+  * rules(lib32gmp-dev): Don't ship libtool .la files.
+  
   * Remove lib64gmp* packages.
 
  -- Steve M. Robbins <smr@debian.org>  Sun, 30 Jun 2013 20:38:46 -0500
