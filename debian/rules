@@ -41,8 +41,6 @@ else
   endif
 endif
 
-lib32dir = usr/lib32
-
 
 confflags = --prefix=/usr --enable-cxx
 
@@ -60,12 +58,6 @@ else
   confflags_build += --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE) --target $(DEB_HOST_GNU_TYPE)
 endif
 
-ifneq (,$(findstring $(DEB_HOST_ARCH), amd64 ppc64 kfreebsd-amd64))
-  EXTRA_INSTALL=install32
-  m32=-m32
-  confflags32 = ABI=32 $(confflags) $(confflags_build) --libdir=/${lib32dir}
-endif
-
 ifneq (,$(findstring $(DEB_HOST_ARCH), x32))
   confflags += ABI=x32
 endif
@@ -73,10 +65,7 @@ endif
 confflags_ma = $(confflags) $(confflags_build) --libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
 CC   = $(DEB_HOST_GNU_TYPE)-gcc
-CC32 = $(DEB_HOST_GNU_TYPE)-gcc $(m32)
-
 CXX   = $(DEB_HOST_GNU_TYPE)-g++
-CXX32 = $(DEB_HOST_GNU_TYPE)-g++ $(m32)
 
 
 get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.bz2
@@ -103,14 +92,6 @@ configure-stamp:
 	    CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)"
 	touch $@
 
-configure32: configure32-stamp
-configure32-stamp:
-	mkdir -p build32
-	cd build32 && ../configure $(confflags32) \
-	    AR=$(AR) CC="$(CC32)" CFLAGS="$(CFLAGS)" \
-	    CXX="$(CXX32)" CXXFLAGS="$(CXXFLAGS)" 
-	touch $@
-
 build: build-stamp
 build-stamp: configure
 	dh_testdir
@@ -118,17 +99,10 @@ build-stamp: configure
 	$(MAKE_CHECK) -C build
 	touch $@
 
-build32-stamp: configure32
-	dh_testdir
-	$(MAKE) $(JOBSFLAG) -C build32
-	$(MAKE_CHECK) -C build32
-	touch $@
-
 clean:
 	dh_testdir
 	dh_testroot
 	rm -rf build build-stamp
-	rm -rf build32 build32-stamp
 	dh_clean
 
 install-prep:
@@ -153,18 +127,6 @@ install: build-stamp install-prep
 	# Install upstream ChangeLog, AUTHORS, NEWS, and README only in -dev package
 	dh_installchangelogs -plibgmp-dev
 	dh_installdocs -plibgmp-dev AUTHORS NEWS README
-
-install32: build32-stamp install-prep
-	rm -rf debian/tmp
-	$(MAKE) DESTDIR=`pwd`/debian/tmp includeexecdir=/usr/include/gmp32/$(DEB_HOST_MULTIARCH) -C build32 install
-
-	dh_install -plib32gmp10 ${lib32dir}/libgmp.so.*
-	dh_install -plib32gmpxx4 ${lib32dir}/libgmpxx.so.*
-
-	dh_install -plib32gmp-dev ${lib32dir}/lib*.so
-	dh_install -plib32gmp-dev ${lib32dir}/lib*.a
-	dh_install -plib32gmp-dev usr/include/gmp32
-
 
 # This single target is used to build all the packages, all at once, or
 # one at a time. So keep in mind: any options passed to commands here will
