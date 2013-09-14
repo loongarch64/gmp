@@ -1,3 +1,12 @@
+gmp (2:5.1.2+dfsg-3) unstable; urgency=low
+
+  * patches/mpn_sbpi1_div.patch: New.  Upstream patch to fix computation
+    of mpn_sbpi1_div_qr_sec and mpn_sbpi1_div_r_sec.
+  
+  * Remove lib32gmp* packages.  Closes: #714998.
+
+ -- Steve M. Robbins <smr@debian.org>  Sat, 14 Sep 2013 13:52:27 -0500
+
 gmp (2:5.1.2+dfsg-2) unstable; urgency=low
 
   * rules: Install gmp.h into multi-arch include directory.  For

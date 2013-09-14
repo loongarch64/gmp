@@ -63,54 +63,6 @@ Description: Multiprecision arithmetic library developers tools
  The MPFR library (multiple-precision floating-point) used to be
  included, but has since been moved to package libmpfr-dev.
 
-Package: lib32gmp10
-Section: libs
-Priority: optional
-Architecture: amd64 ppc64 kfreebsd-amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libc6-i386 (<= 2.9-18)
-Description: Multiprecision arithmetic library (32bit)
- GNU MP is a programmer's library for arbitrary precision
- arithmetic (ie, a bignum package).  It can operate on signed
- integer, rational, and floating point numeric types.  This
- package includes a 32 bit version of the shared library.
- .
- It has a rich set of functions, and the functions have a regular
- interface.
-
-Package: lib32gmpxx4
-Section: libs
-Priority: optional
-Architecture: amd64 ppc64 kfreebsd-amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libc6-i386 (<= 2.9-18)
-Description: Multiprecision arithmetic library (C++ bindings, 32bit)
- GNU MP is a programmer's library for arbitrary precision
- arithmetic (ie, a bignum package).  It can operate on signed
- integer, rational, and floating point numeric types.  This
- package includes a 32 bit version of the shared library.
-
-Package: lib32gmp-dev
-Section: libdevel
-Priority: optional
-Architecture: amd64 ppc64 kfreebsd-amd64
-Depends: libgmp-dev (= ${binary:Version}), lib32gmp10 (= ${binary:Version}), lib32gmpxx4 (= ${binary:Version}), ${misc:Depends}
-Provides: lib32gmp10-dev, lib32gmp3-dev
-Suggests: libgmp10-doc, libmpfr-dev
-Conflicts: libc6-i386 (<= 2.9-18), lib32gmp3-dev, lib32gmp10-dev
-Replaces: lib32gmp3-dev, lib32gmp10-dev
-Description: Multiprecision arithmetic library developers tools (32bit)
- This development package provides the header files and the symbolic
- links to allow compilation and linking of programs that use the
- libraries provided in the libgmp10 package.  This package includes 32
- bit versions of the link libraries.
- .
- Both C and C++ bindings are present in this package.  Package
- libstdc++-dev is required to use the C++ bindings.  
- .
- The MPFR library (multiple-precision floating-point) used to be
- included, but has since been moved to package libmpfr-dev.
-
 Package: libgmp10-doc
 Section: doc
 Priority: optional
