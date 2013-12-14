@@ -7,7 +7,7 @@ Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.
 Uploaders: Steve M. Robbins <smr@debian.org>
 Vcs-Svn: svn://svn.debian.org/svn/debian-science/packages/gmp/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/debian-science/packages/gmp/trunk/
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 
 Package: libgmp10
 Section: libs
