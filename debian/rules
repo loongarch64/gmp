@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-ORIG_SRC_VERSION = 5.1.3
+ORIG_SRC_VERSION = 6.0.0
 
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
@@ -68,8 +68,8 @@ CC   = $(DEB_HOST_GNU_TYPE)-gcc
 CXX   = $(DEB_HOST_GNU_TYPE)-g++
 
 
-get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.bz2
-	tar --bzip -xf $<
+get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.xz
+	tar --xz -xf $<
 	mv gmp-$(ORIG_SRC_VERSION) gmp-$(ORIG_SRC_VERSION)+dfsg
 	mkdir gmp-doc-$(ORIG_SRC_VERSION)
 	mv gmp-$(ORIG_SRC_VERSION)+dfsg/doc/ gmp-doc-$(ORIG_SRC_VERSION)/
@@ -77,11 +77,11 @@ get-orig-source: gmp-$(ORIG_SRC_VERSION).tar.bz2
 	touch gmp-$(ORIG_SRC_VERSION)+dfsg/doc/Makefile.am
 	touch gmp-$(ORIG_SRC_VERSION)+dfsg/doc/Makefile.in
 	cd gmp-$(ORIG_SRC_VERSION)+dfsg/ && autoreconf --force --install
-	tar czf gmp_$(ORIG_SRC_VERSION)+dfsg.orig.tar.gz gmp-$(ORIG_SRC_VERSION)+dfsg
-	tar czf gmp-doc_$(ORIG_SRC_VERSION).orig.tar.gz gmp-doc-$(ORIG_SRC_VERSION)
-	rm -rf gmp-$(ORIG_SRC_VERSION)+dfsg gmp-doc-$(ORIG_SRC_VERSION) gmp-$(ORIG_SRC_VERSION).tar.gz
+	tar --xz -cf gmp_$(ORIG_SRC_VERSION)+dfsg.orig.tar.xz gmp-$(ORIG_SRC_VERSION)+dfsg
+	tar --xz -cf gmp-doc_$(ORIG_SRC_VERSION).orig.tar.xz gmp-doc-$(ORIG_SRC_VERSION)
+	rm -rf gmp-$(ORIG_SRC_VERSION)+dfsg gmp-doc-$(ORIG_SRC_VERSION)
 
-gmp-$(ORIG_SRC_VERSION).tar.bz2:
+gmp-$(ORIG_SRC_VERSION).tar.xz:
 	wget ftp://ftp.gnu.org/gnu/gmp/$@
 
 configure: configure-stamp
