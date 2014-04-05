@@ -1,3 +1,10 @@
+gmp (2:6.0.0+dfsg-2) unstable; urgency=medium
+
+  * patches/arm-asm-nothumb.patch: Don't use assmbly on ARM Thumb
+    devices.  Closes: #742814
+
+ -- Steve M. Robbins <smr@debian.org>  Fri, 04 Apr 2014 23:39:40 -0500
+
 gmp (2:6.0.0+dfsg-1) unstable; urgency=medium
 
   * New upstream.  Closes: #742564.
