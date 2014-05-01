@@ -1,4 +1,4 @@
-gmp (2:6.0.0+dfsg-3) UNRELEASED; urgency=medium
+gmp (2:6.0.0+dfsg-3) unstable; urgency=medium
 
   * Thanks Jordi for awesome NMUs! =)
   * Apply changes from colin/ubuntu:
@@ -10,7 +10,7 @@ gmp (2:6.0.0+dfsg-3) UNRELEASED; urgency=medium
   * Update symbols for alpha.
   * Update symbols for sh4.
 
- -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 01 May 2014 01:15:35 +0100
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 01 May 2014 03:23:17 +0100
 
 gmp (2:6.0.0+dfsg-2.3) unstable; urgency=medium
 
