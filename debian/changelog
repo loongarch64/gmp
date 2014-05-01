@@ -1,3 +1,28 @@
+gmp (2:6.0.0+dfsg-2.3) unstable; urgency=medium
+
+  * Non-maintainer upload. Third time's a charm... I hope.
+  * Extend libgmp10.symbols with symbols for all official Debian
+    architectures, plus arm64, hppa and sparc64 from debian-ports.org.
+  * Revert usage of dpkg-gensymbols -c4, at least for now.
+
+ -- Jordi Mallach <jordi@debian.org>  Sun, 27 Apr 2014 18:50:38 +0200
+
+gmp (2:6.0.0+dfsg-2.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add arch overrides for three symbols that are not available on
+    every architecture, and check they were all available in 5.0.1.
+
+ -- Jordi Mallach <jordi@debian.org>  Sat, 26 Apr 2014 20:00:14 +0200
+
+gmp (2:6.0.0+dfsg-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add a .symbols file, as provided by Magnus Holmgren (closes: #745233).
+  * Pass -c4 to dpkg-gensymbols to detect future symbol changes.
+
+ -- Jordi Mallach <jordi@debian.org>  Sat, 26 Apr 2014 16:40:35 +0200
+
 gmp (2:6.0.0+dfsg-2) unstable; urgency=medium
 
   * patches/arm-asm-nothumb.patch: Don't use assmbly on ARM Thumb
