@@ -174,10 +174,10 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_add_nc_pentium4_sse2@Base 2:5.1.1
  (arch=any-i386)__gmpn_add_nc_pentium@Base 2:5.1.1
  (arch=any-i386)__gmpn_add_nc_x86@Base 2:5.1.1
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_addaddmul_1msb0@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_addaddmul_1msb0@Base 0
  (arch=!arm64 !hppa !mips !mipsel !sparc64)__gmpn_addlsh1_n@Base 0
  (arch=any-i386)__gmpn_addlsh1_n_init@Base 2:5.1.1
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !s390x !sparc64)__gmpn_addlsh2_n@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !s390x !sparc64)__gmpn_addlsh2_n@Base 0
  (arch=any-i386)__gmpn_addlsh2_n_init@Base 2:5.1.1
  (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_addlsh_n@Base 0
  __gmpn_addmul_1@Base 0
@@ -197,7 +197,7 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_addmul_1c_pentium4_sse2@Base 2:5.1.1
  (arch=any-i386)__gmpn_addmul_1c_pentium@Base 2:5.1.1
  (arch=any-i386)__gmpn_addmul_2_init@Base 2:5.1.1
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64)__gmpn_addmul_2@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64)__gmpn_addmul_2@Base 0
  __gmpn_and_n@Base 0
  __gmpn_andn_n@Base 0
  __gmpn_bases@Base 0
@@ -220,7 +220,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_brootinv@Base 2:5.1.1
  __gmpn_bsqrt@Base 2:5.1.1
  __gmpn_bsqrtinv@Base 2:5.1.1
- (arch=armel armhf mips mipsel s390x sparc64 any-i386)__gmpn_clz_tab@Base 0
+ (arch=alpha armel armhf mips mipsel s390x sparc64 any-i386)__gmpn_clz_tab@Base 0
  __gmpn_cmp@Base 0
  __gmpn_cnd_add_n@Base 2:6.0.0
  (arch=any-i386)__gmpn_cnd_add_n_atom@Base 2:5.1.1
@@ -254,6 +254,7 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_copyi_pentium4@Base 2:5.1.1
  (arch=any-i386)__gmpn_copyi_pentium@Base 2:5.1.1
  (arch=any-i386)__gmpn_copyi_x86@Base 2:5.1.1
+ (arch=alpha)__gmpn_count_leading_zeros@Base 2:5.1.1
  (arch=any-i386)__gmpn_cpuid@Base 2:5.1.1
  (arch=any-i386)__gmpn_cpuid_available@Base 2:5.1.1
  (arch=any-i386)__gmpn_cpuvec@Base 2:5.1.1
@@ -417,7 +418,7 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_mod_34lsub1_pentium4_sse2@Base 2:5.1.1
  (arch=any-i386)__gmpn_mod_34lsub1_pentium@Base 2:5.1.1
  (arch=any-i386)__gmpn_mod_34lsub1_x86@Base 2:5.1.1
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !ppc64el !s390x !sparc64 !any-i386)__gmpn_modexact_1_odd@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !ppc64el !s390x !sparc64 !any-i386)__gmpn_modexact_1_odd@Base 0
  (arch=any-i386)__gmpn_modexact_1_odd_atom@Base 2:5.1.1
  (arch=any-i386)__gmpn_modexact_1_odd_k6@Base 2:5.1.1
  (arch=any-i386)__gmpn_modexact_1_odd_k7@Base 2:5.1.1
@@ -463,7 +464,7 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_mul_1c_p6_sse2@Base 2:5.1.1
  (arch=any-i386)__gmpn_mul_1c_pentium4_sse2@Base 2:5.1.1
  (arch=any-i386)__gmpn_mul_1c_pentium@Base 2:5.1.1
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_mul_2@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_mul_2@Base 0
  __gmpn_mul_basecase@Base 0
  (arch=any-i386)__gmpn_mul_basecase_atom_sse2@Base 2:5.1.1
  (arch=any-i386)__gmpn_mul_basecase_init@Base 2:5.1.1
@@ -520,13 +521,13 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_redc_n@Base 0
  __gmpn_remove@Base 0
  __gmpn_rootrem@Base 0
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !sparc64 !any-i386)__gmpn_rsblsh1_n@Base 0
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !s390x !sparc64 !any-i386)__gmpn_rsblsh2_n@Base 0
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_rsblsh_n@Base 0
- (arch=!arm64 !hppa !mips !mipsel !powerpc !s390x !sparc64 !any-i386)__gmpn_rsh1add_n@Base 0
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_rsh1add_nc@Base 0
- (arch=!arm64 !hppa !mips !mipsel !powerpc !s390x !sparc64 !any-i386)__gmpn_rsh1sub_n@Base 0
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_rsh1sub_nc@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !sparc64 !any-i386)__gmpn_rsblsh1_n@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !s390x !sparc64 !any-i386)__gmpn_rsblsh2_n@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_rsblsh_n@Base 0
+ (arch=!alpha !arm64 !hppa !mips !mipsel !powerpc !s390x !sparc64 !any-i386)__gmpn_rsh1add_n@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_rsh1add_nc@Base 0
+ (arch=!alpha !arm64 !hppa !mips !mipsel !powerpc !s390x !sparc64 !any-i386)__gmpn_rsh1sub_n@Base 0
+ (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !powerpc !ppc64el !s390x !sparc64 !any-i386)__gmpn_rsh1sub_nc@Base 0
  __gmpn_rshift@Base 0
  (arch=any-i386)__gmpn_rshift_atom@Base 2:5.1.1
  (arch=any-i386)__gmpn_rshift_init@Base 2:5.1.1
@@ -606,7 +607,7 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_sub_nc_x86@Base 2:5.1.1
  (arch=!arm64 !hppa !mips !mipsel !sparc64)__gmpn_sublsh1_n@Base 0
  (arch=any-i386)__gmpn_sublsh1_n_init@Base 2:5.1.1
- (arch=ppc64el)__gmpn_sublsh2_n@Base 2:5.1.1
+ (arch=alpha ppc64el)__gmpn_sublsh2_n@Base 2:5.1.1
  __gmpn_submul_1@Base 0
  (arch=any-i386)__gmpn_submul_1_atom_sse2@Base 2:5.1.1
  (arch=any-i386)__gmpn_submul_1_init@Base 2:5.1.1
@@ -658,7 +659,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_toom_interpolate_8pts@Base 0
  __gmpn_trialdiv@Base 0
  (arch=armel armhf hppa any-i386)__gmpn_udiv_qrnnd@Base 0
- (arch=hppa mips mipsel powerpc ppc64el any-i386)__gmpn_umul_ppmm@Base 0
+ (arch=alpha hppa mips mipsel powerpc ppc64el any-i386)__gmpn_umul_ppmm@Base 0
  __gmpn_xnor_n@Base 0
  __gmpn_xor_n@Base 0
  __gmpn_zero@Base 0
