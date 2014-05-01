@@ -6,7 +6,7 @@ gmp (2:6.0.0+dfsg-3) UNRELEASED; urgency=medium
     libstdc++-dev.
   * Cherry-pick patch from upstream to fix up ppc64el missing
     BMOD_1_TO_MOD_1_THRESHOLD define.
-  * Update symbols for ppc64el.
+  * Fix up arm64 & ppc64el symbols thanks to Adam Conrad.
 
  -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 01 May 2014 01:15:35 +0100
 
