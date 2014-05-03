@@ -1,6 +1,7 @@
-gmp (2:6.0.0+dfsg-3ubuntu1) UNRELEASED; urgency=medium
+gmp (2:6.0.0+dfsg-4) UNRELEASED; urgency=medium
 
   * Update symbols for sparc.
+  * Update symbols for m68k.
 
  -- Dimitri John Ledkov <xnox@ubuntu.com>  Sat, 03 May 2014 08:14:05 +0100
 
