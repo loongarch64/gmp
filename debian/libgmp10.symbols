@@ -225,9 +225,9 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-amd64)__gmpn_addaddmul_1msb0@Base 0
  (arch=!arm64 !hppa !mips !mipsel !m68k !sparc !sparc64 !sh4)__gmpn_addlsh1_n@Base 0
  (arch=any-i386)__gmpn_addlsh1_n_init@Base 2:5.1.1
- (arch=!alpha !arm64 !armel !armhf !hppa !mips !mipsel !m68k !powerpc !s390x !sh4 !sparc !sparc64)__gmpn_addlsh2_n@Base 0
+ (arch=!arm64 !armel !armhf !hppa !mips !mipsel !m68k !powerpc !s390x !sh4 !sparc !sparc64)__gmpn_addlsh2_n@Base 0
  (arch=any-i386)__gmpn_addlsh2_n_init@Base 2:5.1.1
- (arch=!arm64 !armel !armhf !hppa !mips !mipsel !m68k !powerpc !ppc64 !ppc64el !s390x !sh4 !sparc !sparc64 !any-i386)__gmpn_addlsh_n@Base 0
+ (arch=any-amd64)__gmpn_addlsh_n@Base 0
  __gmpn_addmul_1@Base 0
  (arch=any-i386)__gmpn_addmul_1_atom_sse2@Base 2:5.1.1
  (arch=any-i386)__gmpn_addmul_1_init@Base 2:5.1.1
