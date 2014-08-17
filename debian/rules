@@ -62,7 +62,7 @@ ifneq (,$(findstring $(DEB_HOST_ARCH), x32))
   confflags += ABI=x32
 endif
 
-ifneq (,$(findstring $(DEB_HOST_ARCH), mips64 mips64el))
+ifneq (,$(filter $(DEB_HOST_ARCH), mips64 mips64el))
   confflags += ABI=64
 endif
 
