@@ -62,6 +62,10 @@ ifneq (,$(findstring $(DEB_HOST_ARCH), x32))
   confflags += ABI=x32
 endif
 
+ifneq (,$(findstring $(DEB_HOST_ARCH), mips64 mips64el))
+  confflags += ABI=64
+endif
+
 confflags_ma = $(confflags) $(confflags_build) --libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
 CC   = $(DEB_HOST_GNU_TYPE)-gcc
