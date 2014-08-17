@@ -1,3 +1,11 @@
+gmp (2:6.0.0+dfsg-5) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols and pass ABI=64 for mips64(el) (Closes: #748319)
+  * Update symbols for powerpcspe (Closes: #750478)
+
+ -- Aron Xu <aron@debian.org>  Sun, 17 Aug 2014 20:38:32 +0800
+
 gmp (2:6.0.0+dfsg-4) unstable; urgency=medium
 
   * Update symbols for sparc.
