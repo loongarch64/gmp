@@ -1,3 +1,9 @@
+gmp (2:6.0.0+dfsg-6) unstable; urgency=medium
+
+  * control: Drop recommends libstdc++.  Closes: #781196.
+
+ -- Steve M. Robbins <smr@debian.org>  Mon, 08 Jun 2015 22:31:37 -0500
+
 gmp (2:6.0.0+dfsg-5) unstable; urgency=medium
 
   * Team upload.
