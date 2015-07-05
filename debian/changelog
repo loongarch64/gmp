@@ -1,9 +1,9 @@
 gmp (2:6.0.0+dfsg-6) unstable; urgency=medium
 
-  * control: Drop recommends libstdc++ (Closes: #781196).  Suggest gmp-doc
-    (Closes: #735545).
+  * Team upload.
+  * Use filter instead of finstring (Closes: #758438)
 
- -- Steve M. Robbins <smr@debian.org>  Sun, 05 Jul 2015 12:13:31 -0500
+ -- Aron Xu <aron@debian.org>  Mon, 18 Aug 2014 03:39:42 +0800
 
 gmp (2:6.0.0+dfsg-5) unstable; urgency=medium
 
