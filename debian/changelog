@@ -4,10 +4,9 @@ gmp (2:6.1.0+dfsg-1) unstable; urgency=medium
     - patches/arm-asm-nothumb.patch:
     - patches/4a6d258b467f.patch: Remove.  Applied upstream.
 
-  * libgmp10.symbols: updated for new release.  Apply supplied sed script
-    for musl (Closes: #788411).
+  * libgmp10.symbols: updated for new release.
 
- -- Steve M. Robbins <smr@debian.org>  Sun, 15 Nov 2015 10:51:27 -0600
+ -- Steve M. Robbins <smr@debian.org>  Sun, 15 Nov 2015 11:14:18 -0600
 
 gmp (2:6.0.0+dfsg-7) unstable; urgency=medium
 
