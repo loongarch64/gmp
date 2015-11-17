@@ -1,3 +1,11 @@
+gmp (2:6.1.0+dfsg-2) unstable; urgency=medium
+
+  * libgmp10.symbols: mark __gmpn_clz_tab as optional -- it is
+    architecture dependent and just changed from defined to undefined for
+    armel and armhf.
+
+ -- Steve M. Robbins <smr@debian.org>  Tue, 17 Nov 2015 05:12:15 -0600
+
 gmp (2:6.1.0+dfsg-1) unstable; urgency=medium
 
   * New upstream.

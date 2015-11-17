@@ -269,7 +269,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_brootinv@Base 2:5.1.1
  __gmpn_bsqrt@Base 2:5.1.1
  __gmpn_bsqrtinv@Base 2:5.1.1
- (arch=alpha armel armhf mips mipsel mips64 mips64el s390x sparc sparc64 sh4 any-i386)__gmpn_clz_tab@Base 0
+ (optional)__gmpn_clz_tab@Base 0
  __gmpn_cmp@Base 0
  __gmpn_cnd_add_n@Base 2:6.0.0
  (arch=any-i386)__gmpn_cnd_add_n_atom@Base 2:5.1.1
