@@ -1,3 +1,9 @@
+gmp (2:6.1.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream.
+
+ -- Steve M. Robbins <smr@debian.org>  Fri, 24 Jun 2016 20:57:33 -0500
+
 gmp (2:6.1.0+dfsg-2) unstable; urgency=medium
 
   * libgmp10.symbols: mark __gmpn_clz_tab as optional -- it is
