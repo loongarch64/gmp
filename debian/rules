@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-ORIG_SRC_VERSION = 6.1.1
+ORIG_SRC_VERSION = 6.1.2
 
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
