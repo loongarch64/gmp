@@ -6,8 +6,8 @@ Priority: optional
 Build-Depends: m4,
                debhelper (>= 9)
 Standards-Version: 4.1.1
-Vcs-Browser: http://anonscm.debian.org/viewvc/debian-science/packages/gmp/trunk/
-Vcs-Svn: svn://anonscm.debian.org/debian-science/packages/gmp/trunk/
+Vcs-Browser: https://salsa.debian.org/science-team/gmp.git
+Vcs-Git: https://salsa.debian.org/science-team/gmp.git
 Homepage: http://gmplib.org/
 
 Package: libgmp10
