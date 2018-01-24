@@ -1,3 +1,19 @@
+gmp (2:6.1.2+dfsg-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Update symbols for ia64 (Closes: #885907)
+
+ -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Mon, 15 Jan 2018 13:06:20 +0100
+
+gmp (2:6.1.2+dfsg-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Update symbols for nios2, thanks Helmut Grohne (Closes: #814671)
+  * Update symbols for tilegx, thanks Helmut Grohne (Closes: #850010)
+  * Update symbols for sh3, thanks Adrian Glaubitz (Closes: #851895)
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 29 Sep 2017 02:22:49 +0200
+
 gmp (2:6.1.2+dfsg-1) unstable; urgency=medium
 
   * New upstream.
