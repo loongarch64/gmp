@@ -1,3 +1,10 @@
+gmp (2:6.1.2+dfsg-3) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * UNRELEASED
+
+ -- James Clarke <jrtc27@debian.org>  Tue, 06 Mar 2018 21:59:45 +0000
+
 gmp (2:6.1.2+dfsg-2) unstable; urgency=medium
 
   * Team upload.
