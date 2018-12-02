@@ -1,12 +1,12 @@
-gmp (2:6.1.2+dfsg-4) UNRELEASED; urgency=medium
+gmp (2:6.1.2+dfsg-4) unstable; urgency=medium
 
   * Team Upload.
   * Mark libgmp10-doc as M-A: foreign and libgmp3-dev as M-A: same.
     (Closes: #862256)
-  * Cherry-pick upstream patch to raise SIGFPE when available, instead of
-     abort. (Closes: #911282)
+  * Cherry-pick upstream patch to raise SIGFPE when available,
+    instead of abort. (Closes: #911282)
 
- -- Mo Zhou <cdluminate@gmail.com>  Sun, 02 Dec 2018 06:24:55 +0000
+ -- Mo Zhou <cdluminate@gmail.com>  Sun, 02 Dec 2018 06:39:34 +0000
 
 gmp (2:6.1.2+dfsg-3) unstable; urgency=medium
 
