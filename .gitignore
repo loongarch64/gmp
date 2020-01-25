@@ -1,0 +1,13 @@
+build-stamp
+build/
+configure-stamp
+debian/.debhelper/
+debian/files
+debian/*.log
+debian/*.substvars
+debian/tmp/
+debian/libgmp-dev/
+debian/libgmp10-doc/
+debian/libgmp10/
+debian/libgmp3-dev/
+debian/libgmpxx4ldbl/
