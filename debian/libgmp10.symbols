@@ -287,7 +287,7 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_com_k6_mmx@Base 2:5.1.1
  (arch=any-i386)__gmpn_com_k7_mmx@Base 2:5.1.1
  (arch=any-i386)__gmpn_com_pentium@Base 2:5.1.1
- __gmpn_compute_powtab@Base 2:6.2.0-1
+ __gmpn_compute_powtab@Base 2:6.2.0
  __gmpn_copyd@Base 0
  (arch=any-i386)__gmpn_copyd_atom_mmx@Base 2:5.1.1
  (arch=any-i386)__gmpn_copyd_init@Base 2:5.1.1
@@ -359,16 +359,16 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_fft_best_k@Base 0
  __gmpn_fft_next_size@Base 0
  __gmpn_fib2_ui@Base 0
- __gmpn_fib2m@Base 2:6.2.0-1
+ __gmpn_fib2m@Base 2:6.2.0
  __gmpn_gcd@Base 0
- __gmpn_gcd_11@Base 2:6.2.0-1
+ __gmpn_gcd_11@Base 2:6.2.0
  __gmpn_gcd_1@Base 0
  (arch=any-i386)__gmpn_gcd_1_fat@Base 2:5.1.1
  (arch=any-i386)__gmpn_gcd_1_init@Base 2:5.1.1
  (arch=any-i386)__gmpn_gcd_1_k6@Base 2:5.1.1
  (arch=any-i386)__gmpn_gcd_1_k7@Base 2:5.1.1
  (arch=any-i386)__gmpn_gcd_1_p6@Base 2:5.1.1
- __gmpn_gcd_22@Base 2:6.2.0-1
+ __gmpn_gcd_22@Base 2:6.2.0
  __gmpn_gcd_subdiv_step@Base 0
  __gmpn_gcdext@Base 0
  __gmpn_gcdext_1@Base 0
@@ -587,7 +587,7 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_rshift_x86@Base 2:5.1.1
  __gmpn_sbpi1_bdiv_q@Base 0
  __gmpn_sbpi1_bdiv_qr@Base 0
- __gmpn_sbpi1_bdiv_r@Base 2:6.2.0-1
+ __gmpn_sbpi1_bdiv_r@Base 2:6.2.0
  __gmpn_sbpi1_div_q@Base 0
  __gmpn_sbpi1_div_qr@Base 0
  __gmpn_sbpi1_divappr_q@Base 0
@@ -631,7 +631,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_sqrmod_bnm1@Base 0
  __gmpn_sqrmod_bnm1_next_size@Base 0
  __gmpn_sqrtrem@Base 0
- __gmpn_strongfibo@Base 2:6.2.0-1
+ __gmpn_strongfibo@Base 2:6.2.0
  __gmpn_sub@Base 0
  __gmpn_sub_1@Base 0
  __gmpn_sub_err1_n@Base 2:5.1.1
@@ -843,7 +843,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpz_limbs_modify@Base 2:6.0.0
  __gmpz_limbs_read@Base 2:6.0.0
  __gmpz_limbs_write@Base 2:6.0.0
- __gmpz_lucas_mod@Base 2:6.2.0-1
+ __gmpz_lucas_mod@Base 2:6.2.0
  __gmpz_lucnum2_ui@Base 0
  __gmpz_lucnum_ui@Base 0
  __gmpz_mfac_uiui@Base 2:5.1.1
@@ -893,7 +893,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpz_sizeinbase@Base 0
  __gmpz_sqrt@Base 0
  __gmpz_sqrtrem@Base 0
- __gmpz_stronglucas@Base 2:6.2.0-1
+ __gmpz_stronglucas@Base 2:6.2.0
  __gmpz_sub@Base 0
  __gmpz_sub_ui@Base 0
  __gmpz_submul@Base 0
