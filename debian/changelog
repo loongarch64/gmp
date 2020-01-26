@@ -1,4 +1,4 @@
-gmp (2:6.2.0-1) unstable; urgency=medium
+gmp (2:6.2.0+dfsg-1) unstable; urgency=medium
 
   [ Steve Robbins ]
   * New upstream version 6.2.0
