@@ -555,7 +555,8 @@ libgmp.so.10 libgmp10 #MINVER#
  (arch=any-i386)__gmpn_preinv_mod_1_init@Base 2:5.1.1
  (arch=any-i386)__gmpn_preinv_mod_1_k6@Base 2:5.1.1
  __gmpn_preinv_mu_div_qr@Base 0
- __gmpn_preinv_mu_div_qr_itch@Base 0 __gmpn_random2@Base 0
+ __gmpn_preinv_mu_div_qr_itch@Base 0
+ __gmpn_random2@Base 0
  __gmpn_random@Base 0
  __gmpn_redc_1@Base 0
  (arch=any-i386)__gmpn_redc_1_fat@Base 2:5.1.1
