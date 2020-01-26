@@ -1,3 +1,11 @@
+gmp (2:6.2.0+dfsg-2) experimental; urgency=medium
+
+  [ Steve Robbins ]
+  * Replace explicit assignment of architecture-dependent DEB_ variables by including architecture.mk.
+  * Update symbols file.
+
+ -- Steve M. Robbins <smr@debian.org>  Sun, 26 Jan 2020 09:44:33 -0600
+
 gmp (2:6.2.0+dfsg-1) experimental; urgency=medium
 
   * New upstream version 6.2.0
