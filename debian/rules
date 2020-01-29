@@ -122,6 +122,7 @@ install: build-stamp install-prep
 
 	dh_install -plibgmp-dev usr/lib/*/lib*.so
 	dh_install -plibgmp-dev usr/lib/*/lib*.a
+	dh_install -plibgmp-dev usr/lib/*/pkgconfig
 	dh_install -plibgmp-dev usr/include
 
 	# Install upstream ChangeLog, AUTHORS, NEWS, and README only in -dev package
