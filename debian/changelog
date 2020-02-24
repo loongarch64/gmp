@@ -1,3 +1,10 @@
+gmp (2:6.2.0+dfsg-4) unstable; urgency=medium
+
+  [ Steve Robbins ]
+  * Add breaks for packages known to be broken by GMP 6.2.0.  Closes: #950608.
+
+ -- Steve M. Robbins <smr@debian.org>  Sun, 23 Feb 2020 21:06:28 -0600
+
 gmp (2:6.2.0+dfsg-3) unstable; urgency=medium
 
   * Upload 6.2.0 to unstable.  Closes: #949380.
