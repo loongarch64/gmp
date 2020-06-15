@@ -1,4 +1,19 @@
-gmp (2:6.2.0+dfsg-4) unstable; urgency=medium
+gmp (2:6.2.0+dfsg-6) unstable; urgency=medium
+
+  * Revert (2:6.2.0+dfsg-5) changes as multi-arch libs should be used instead.
+    See continued discussion in 950645.
+
+ -- Steve M. Robbins <smr@debian.org>  Sun, 14 Jun 2020 19:03:25 -0500
+
+gmp (2:6.2.0+dfsg-5) unstable; urgency=medium
+
+  * Team Upload.
+  * add lib64 for i386 x32 mipsel etc, 
+    to support gcc host64 and target32 (Closes: 950645)
+
+ -- YunQiang Su <syq@debian.org>  Thu, 14 May 2020 13:49:24 +0800
+
+ gmp (2:6.2.0+dfsg-4) unstable; urgency=medium
 
   [ Steve Robbins ]
   * Add breaks for packages known to be broken by GMP 6.2.0.  Closes: #950608.
