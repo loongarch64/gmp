@@ -20,7 +20,7 @@ gmp (2:6.2.0+dfsg-5) unstable; urgency=medium
 
  -- YunQiang Su <syq@debian.org>  Thu, 14 May 2020 13:49:24 +0800
 
- gmp (2:6.2.0+dfsg-4) unstable; urgency=medium
+gmp (2:6.2.0+dfsg-4) unstable; urgency=medium
 
   [ Steve Robbins ]
   * Add breaks for packages known to be broken by GMP 6.2.0.  Closes: #950608.
