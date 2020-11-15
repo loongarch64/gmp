@@ -1,9 +1,11 @@
-gmp (2:6.2.1-1) UNRELEASED; urgency=medium
+gmp (2:6.2.1+dfsg-1) unstable; urgency=medium
 
   [ Steve Robbins ]
   * [3be3321] New upstream version 6.2.1
+  * [e5fcd68] Use debhelper 13.
+  * [bb9a2bf] Remove  DH_COMPAT=6 used on dh_installchangelogs
 
- -- Steve M. Robbins <smr@debian.org>  Sun, 15 Nov 2020 11:31:19 -0600
+ -- Steve M. Robbins <smr@debian.org>  Sun, 15 Nov 2020 12:04:37 -0600
 
 gmp (2:6.2.0+dfsg-6) unstable; urgency=medium
 
