@@ -138,8 +138,7 @@ binary-common:
 	sed -i "/dependency_libs/ s/'.*'/''/" `find debian/ -name '*.la'`
 	dh_testdir
 	dh_testroot
-	# User lower compatibility to avoid installing upstream changelog in all packages
-	DH_COMPAT=6 dh_installchangelogs
+	dh_installchangelogs
 	dh_installdocs
 	dh_installexamples
 	dh_installmenu
